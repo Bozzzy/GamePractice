@@ -56,10 +56,6 @@ class GameViewController: UIViewController {
     }
     
     
-    func spanShip () {
-        ship = SCNScene(named: "art.scnassets/ship.scn")!.rootNode.clone()
-    }
-
     func addShip() {
         let x = Int.random(in: -25...25)
         let y = Int.random(in: -25...25)
@@ -75,7 +71,6 @@ class GameViewController: UIViewController {
             self.ship.removeFromParentNode()
             print(#line, #function, "game over killed by ship \(self.score)")
         }
-        
         // retrieve sceene
         scnView.scene?.rootNode.addChildNode(ship)
             
